@@ -25,5 +25,8 @@ lemur-nginx:
 postgres:
   restart: always
   image: postgres:latest
+  environment:
+    - POSTGRES_USER=lemur
+    - POSTGRES_PASSWORD=lemur
   ports:
     - "5432:5432"
